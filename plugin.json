@@ -1,0 +1,11 @@
+{
+   "id": "azz_tools",
+   "minversion": 202200118711,
+   "info": {
+       "name": "Azzier's Tools",
+       "version": "1.0",
+       "author": "Azzier",
+       "description": "Some smaller addons for MCreator!",
+	   "updateJSONURL": ""
+   }
+}
