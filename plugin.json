@@ -6,6 +6,6 @@
        "version": "1.0",
        "author": "Azzier",
        "description": "Some smaller addons for MCreator!",
-	   "updateJSONURL": ""
+       "updateJSONURL": "https://raw.githubusercontent.com/Azzy380/Azzier-s-tools/main/update.json"
    }
 }
