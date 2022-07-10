@@ -7,7 +7,8 @@ You can give suggestions for new ones procedures and stuff.
 #### Versions with 3 numbers (vX.Y.Z) are untested.
 
 ## Version 1.1:
-- Removed 1.15.2 support. 
+- Removed 1.15.2 support.
+- Added special attributes for horses, zombies and flying mobs.
 - [BugFix] Attributes for 1.16.5.
 
 ## Version 1.0:
