@@ -1,0 +1,94 @@
+{
+"message0": "Is %2 neutral mob a %1",
+"args0": [
+   {
+       "type":"field_dropdown",
+       "name":"types",
+       "options": [
+       [
+           "Bat",
+           "Bat"
+       ],
+       [
+           "Iron Golem",
+           "IronGolem"
+       ],
+       [
+           "Snow Golem",
+           "SnowGolem"
+       ],
+       [
+           "(Any) Golem",
+           "AbstractGolem"
+       ],
+       [
+           "(Any) Animal",
+           "Animal"
+       ],
+       [
+           "(Any) Squid",
+           "Squid"
+       ],
+       [
+           "Glow Squid",
+           "GlowSquid"
+       ],
+       [
+           "Dolphin",
+           "Dolphin"
+       ],
+       [
+           "Wolf",
+           "Wolf"
+       ],
+       [
+           "Bee",
+           "Bee"
+       ],
+       [
+           "Goat",
+           "TropicalFish"
+       ],
+       [
+           "Trader Llama",
+           "TropicalFish"
+       ],
+       [
+           "Polar Bear",
+           "PolarBear"
+       ],
+       [
+           "Panda",
+           "Panda"
+       ]
+       ]
+   },
+   {
+       "type":"input_value",
+       "name":"entity",
+       "check":"Entity"
+   }
+],
+"inputsInline": true,
+"output": "Boolean",
+"colour": "%{BKY_LOGIC_HUE}",
+"extensions": [
+],
+"mcreator": {
+   "toolbox_id": "azz",
+   "toolbox_init": [
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>"   ],
+   "fields": [
+       "types"
+   ],
+   "inputs": [
+       "entity"
+   ],
+   "dependencies": [
+       {
+           "type": "entity",
+           "name": "entity"
+       }
+   ]
+}
+}
