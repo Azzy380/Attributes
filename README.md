@@ -6,7 +6,7 @@ You can give suggestions for new ones procedures and stuff.
 #### Full releases you can download through Releases tab.
 #### Versions with 3 numbers (vX.Y.Z) are untested.
 
-## Version 1.2
+## Version 1.1
 - Added special attributes for horses, zombies and flying mobs.
 - Added the ability to check whether the Entity is a specific vanilla mob.
 
