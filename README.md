@@ -1,4 +1,4 @@
-# Azzier-s_tools v1.1
+# Azzier's tools v1.1
 Some smaller addons for [MCreator](https://mcreator.net/)!
 
 You can give suggestions for new ones procedures and stuff. 
