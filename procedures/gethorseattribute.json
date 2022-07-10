@@ -1,0 +1,42 @@
+{
+"message0": "Get %1 of horse %2",
+"args0": [
+   {
+       "type":"field_dropdown",
+       "name":"attribute",
+       "options": [
+       [
+           "Jump Strength",
+           "JUMP_STRENGTH"
+       ]
+       ]
+   },
+   {
+       "type":"input_value",
+       "name":"entity",
+       "check":"Entity"
+   }
+],
+"inputsInline": true,
+"output": "Number",
+"colour": "%{BKY_MATH_HUE}",
+"extensions": [
+],
+"mcreator": {
+   "toolbox_id": "azz",
+   "toolbox_init": [
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>"   ],
+   "fields": [
+       "attribute"
+   ],
+   "inputs": [
+       "entity"
+   ],
+   "dependencies": [
+       {
+           "type": "entity",
+           "name": "entity"
+       }
+   ]
+}
+}
