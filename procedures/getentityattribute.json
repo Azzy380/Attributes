@@ -34,6 +34,10 @@
            "FOLLOW_RANGE"
        ],
        [
+           "Movement Speed",
+           "MOVEMENT_SPEED"
+       ],
+       [
            "Luck",
            "LUCK"
        ]
