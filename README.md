@@ -7,6 +7,7 @@ You can give suggestions for new ones procedures and stuff.
 
 # Version 1.1.1:
 - Added missing Movement Speed attribute.
+- Renamed plugin to Attributes. 
 
 ## Version 1.1:
 - Removed 1.15.2 support. 
