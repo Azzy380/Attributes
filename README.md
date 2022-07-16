@@ -1,10 +1,12 @@
-# Azzier's tools v1.1
-Some smaller addons for [MCreator](https://mcreator.net/)!
+# Attributes v1.1.1
+Plugin adds all vanilla attributes.
 
 You can give suggestions for new ones procedures and stuff. 
 
 #### Full releases you can download through Releases tab.
-#### Versions with 3 numbers (vX.Y.Z) are untested.
+
+## Version 1.1.1:
+- Added missing Movement Speed attribute.
 
 ## Version 1.1:
 - Removed 1.15.2 support. 
