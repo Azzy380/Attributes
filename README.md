@@ -5,7 +5,7 @@ You can give suggestions for new ones procedures and stuff.
 
 #### Full releases you can download through Releases tab.
 
-## Version 1.1.1:
+# Version 1.1.1:
 - Added missing Movement Speed attribute.
 
 ## Version 1.1:
