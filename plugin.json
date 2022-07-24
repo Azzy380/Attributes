@@ -1,6 +1,7 @@
 {
    "id": "azz_tools",
    "minversion": 202200118711,
+   "maxversion": 202200120510,
    "info": {
        "name": "Attributes",
        "version": "1.1.1",
