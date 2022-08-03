@@ -1,9 +1,14 @@
-# Attributes v1.1.1
+# Attributes v1.1.2
 Plugin adds all vanilla attributes.
 
 You can give suggestions for new ones procedures and stuff. 
 
 #### Full releases you can download through Releases tab.
+
+# Version 1.1.2:
+- small bug fix
+- localisation changes
+
 
 # Version 1.1.1:
 - Added missing Movement Speed attribute.
