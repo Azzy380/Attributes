@@ -1,5 +1,5 @@
 {
-  "message0": "Add new modifier of attribute %2 to item %1 working on slot %3 with value %4 and operation %5",
+  "message0": "Add new modifier of an attribute %2 to an item %1 working on the slot %3 with a value %4 and operation %5",
   "args0": [
     {
       "type": "input_value",
