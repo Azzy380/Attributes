@@ -1,0 +1,50 @@
+{
+  "message0": "Add new modifier of attribute %2 to item %1 working on slot %3 with value %4 and operation %5",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "item",
+      "check": "MCItem"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "attribute",
+      "datalist": "attribute"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "slot",
+      "datalist": "slot"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "operation",
+      "datalist": "operation"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 350,
+  "mcreator": {
+    "toolbox_id": "azz_attr",
+    "toolbox_init": [
+      "<value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value>",
+      "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
+    ],
+    "fields": [
+      "attribute",
+      "slot",
+      "operation"
+    ],
+    "inputs": [
+      "item",
+      "value"
+    ]
+  }
+}

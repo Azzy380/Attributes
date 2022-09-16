@@ -1,0 +1,6 @@
+- ADDITION:
+  readable_name: "ADDITION"
+- MULTIPLY_BASE:
+  readable_name: "MULTIPLY_BASE"
+- MULTIPLY_TOTAL:
+  readable_name: "MULTIPLY_TOTAL"

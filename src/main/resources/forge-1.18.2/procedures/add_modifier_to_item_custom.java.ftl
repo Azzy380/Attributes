@@ -1,0 +1,2 @@
+<#include "mcitems.ftl">
+${mappedMCItemToItemStackCode(input$item, 1)}.addAttributeModifier(${JavaModName}Attributes.${input$attribute?upper_case}.get(), ${field$MODIFIER?replace("local:", "")?replace("global:", "")}, EquipmentSlot.${field$slot});

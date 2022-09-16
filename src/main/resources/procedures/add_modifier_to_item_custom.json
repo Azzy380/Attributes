@@ -1,0 +1,46 @@
+{
+  "message0": "Add modifier %2 of attribute %3 to item %1 working on slot %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "item",
+      "check": "MCItem"
+    },
+    {
+      "type": "input_dummy",
+      "name": "modifier"
+    },
+    {
+      "type": "input_value",
+      "name": "attribute",
+      "check": "String"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "slot",
+      "datalist": "slot"
+    }
+  ],
+  "extensions": [
+    "custom_modifier_variables"
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 350,
+  "mcreator": {
+    "toolbox_id": "azz_attr",
+    "toolbox_init": [
+      "<value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value>",
+      "<value name=\"attribute\"><block type=\"text\"><field name=\"TEXT\">CUSTOM ATTRIBUTE NAME</field></block></value>"
+    ],
+    "fields": [
+      "slot",
+      "MODIFIER"
+    ],
+    "inputs": [
+      "item",
+      "attribute"
+    ]
+  }
+}
