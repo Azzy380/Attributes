@@ -1,0 +1,26 @@
+- ARMOR:
+  readable_name: "ARMOR"
+- ARMOR_TOUGHNESS:
+  readable_name: "ARMOR_TOUGHNESS"
+- ATTACK_DAMAGE:
+  readable_name: "ATTACK_DAMAGE"
+- ATTACK_KNOCKBACK:
+  readable_name: "ATTACK_KNOCKBACK"
+- ATTACK_SPEED:
+  readable_name: "ATTACK_SPEED"
+- FLYING_SPEED:
+  readable_name: "FLYING_SPEED (only flying mobs)"
+- FOLLOW_RANGE:
+  readable_name: "FOLLOW_RANGE (only mobs)"
+- JUMP_STRENGHT:
+  readable_name: "JUMP_STRENGH (only horse-like mobs)"
+- KNOCKBACK_RESISTANCE:
+  readable_name: "KNOCKBACK_RESISTANCE"
+- LUCK:
+  readable_name: "LUCK (only players)"
+- MAX_HEALTH:
+  readable_name: "MAX_HEALTH"
+- MOVEMENT_SPEED:
+  readable_name: "MOVEMENT_SPEED"
+- SPAWN_REIFORCEMENTS_CHANCE:
+  readable_name: "SPAWN_REIFORCEMENTS_CHANCE (only zombie-like mobs)"

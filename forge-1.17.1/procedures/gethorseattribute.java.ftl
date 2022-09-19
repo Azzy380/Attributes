@@ -1,1 +1,0 @@
-((LivingEntity) ${input$entity}).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.${field$attribute}).getBaseValue()

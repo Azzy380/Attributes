@@ -1,0 +1,12 @@
+- CHEST:
+  readable_name: "CHEST"
+- FEET:
+  readable_name: "FEET"
+- HEAD:
+  readable_name: "HEAD"
+- LEGS:
+  readable_name: "LEGS"
+- MAINHAND:
+  readable_name: "MAINHAND"
+- OFFHAND:
+  readable_name: "OFFHAND"
