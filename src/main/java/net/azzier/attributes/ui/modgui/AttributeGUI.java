@@ -46,7 +46,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         JPanel selp = new JPanel(new GridLayout(13, 2, 100, 2));
         selp.setOpaque(false);
 
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elemetgui.attribute.description", new Object[0])));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elementgui.attribute.description", new Object[0])));
         selp.add(this.description);
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/defaultValue"), L10N.label("elementgui.attribute.defaultValue", new Object[0])));
         selp.add(this.defaultValue);
