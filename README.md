@@ -1,7 +1,6 @@
 # Attributes v2.0
 Plugin allows modifying vanilla attributes, adding attribute modifiers to items and creating custom attributes!
-
-You can give suggestions for new ones procedures and stuff. 
+### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
 
