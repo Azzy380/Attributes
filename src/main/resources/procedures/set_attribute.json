@@ -1,5 +1,5 @@
 {
-  "message0": "Set %1 of %2 to %3",
+  "message0": "Set value of attribute %1 of %2 to %3",
   "args0": [
     {
       "type": "field_data_list_selector",

@@ -9,7 +9,7 @@ package ${package}.init;
     public static final DeferredRegister<Attribute>REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, ${JavaModName}.MODID);
 
     <#list attributes as attribute>
-    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute(${JavaModName}.MODID + ".${attribute.getModElement().getRegistryNameUpper().toLowerCase()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
+    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute("${attribute.description}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
     </#list>
 
 

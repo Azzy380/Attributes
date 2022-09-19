@@ -12,6 +12,11 @@ import java.util.List;
  * Class stores informations about created mod element, is saved in Workspace
  */
 public class Attribute extends GeneratableElement {
+    /**
+     * Description of an attribute (Example: Max Health)
+     */
+
+    public String description;
 
     /**
      * Minimal value for new minecraft attribute

@@ -1,5 +1,5 @@
 {
-  "message0": "Add modifier %2 of attribute %3 to item %1 working on slot %4",
+  "message0": "Add new modifier of a custom attribute %2 to an item %1 working on the slot %3 with a value %4 and operation %5",
   "args0": [
     {
       "type": "input_value",
@@ -7,22 +7,24 @@
       "check": "MCItem"
     },
     {
-      "type": "input_dummy",
-      "name": "modifier"
-    },
-    {
-      "type": "input_value",
-      "name": "attribute",
-      "check": "String"
+      "type": "field_javaname",
+      "name": "attribute"
     },
     {
       "type": "field_data_list_selector",
       "name": "slot",
       "datalist": "slot"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "operation",
+      "datalist": "operation"
     }
-  ],
-  "extensions": [
-    "custom_modifier_variables"
   ],
   "inputsInline": true,
   "previousStatement": null,
@@ -32,15 +34,16 @@
     "toolbox_id": "azz_attr",
     "toolbox_init": [
       "<value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value>",
-      "<value name=\"attribute\"><block type=\"text\"><field name=\"TEXT\">CUSTOM ATTRIBUTE NAME</field></block></value>"
+      "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
     ],
     "fields": [
+      "attribute",
       "slot",
-      "MODIFIER"
+      "operation"
     ],
     "inputs": [
       "item",
-      "attribute"
+      "value"
     ]
   }
 }
