@@ -2,8 +2,8 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
-assignees: ''
+labels: bug
+assignees: Azzy380
 
 ---
 
@@ -18,7 +18,10 @@ Steps to reproduce the behavior:
 4. See error
 
 **Desktop (please complete the following information):**
- - OS: [e.g. Windows 10] 
+ - OS: [e.g. Windows 10]
 
 **Example Workspace**
 Please provide example workspace.
+
+**Logs**
+Add logs it they are generated.
