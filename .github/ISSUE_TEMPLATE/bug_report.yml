@@ -35,8 +35,8 @@ name: Bug report
      label: Details 
      description: To understand the issue, we need some details of your setup & system 
      placeholder: | 
-       MCreator version: [2021.1 / branch:master / ...] 
-       Generator type: [forge-1.15.2 / forge-1.16.5 / ...] 
+       MCreator version: [2022.2] 
+       Generator type: [forge-1.18.2/forge-1.16.5] 
     validations: 
       required: true 
   - type: textarea 
@@ -60,4 +60,4 @@ name: Bug report
        Longer logs should be posted on [GitHub Gists](https://gist.github.com/) (or other paste service) and linked here. 
      placeholder: https://gist.github.com/... 
     validations: 
-     required: false 
+     required: false
