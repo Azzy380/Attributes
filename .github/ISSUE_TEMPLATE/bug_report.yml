@@ -37,10 +37,7 @@ body:
     id: workspace
     attributes:
       label: Example Workspace (optional)
-      description: |
-       If the bug is related to the workspace, always provide a minimal reproducible example workspace, export it to a shareable ZIP file, and attach it to the ticket. 
-       Keep in mind your workspace of the project is not minimal reproducible example. Make a workspace only with elements crucial for the bug. 
-       Drag the file into this area. 
+      description: If the bug is related to the workspace, always provide a minimal reproducible example workspace, export it to a shareable ZIP file, and attach it to the ticket. Keep in mind your workspace of the project is not minimal reproducible example. Make a workspace only with elements crucial for the bug. Drag the file into this area. 
       render: shell 
   - type: textarea
     id: logs
