@@ -2,8 +2,6 @@ name: Bug Report
 description: File a bug report
 title: "[Bug]: "
 labels: ["bug"]
-assignees:
-  - octocat
 body:
   - type: markdown
     attributes:
@@ -33,9 +31,22 @@ body:
     attributes:
       label: MCreator version
       description: Which version of MCreator are you using. 
+    validations:
+      required: true
+  - type: textarea
+    id: workspace
+    attributes:
+      label: Example Workspace (optional)
+      description: |
+       If the bug is related to the workspace, always provide a minimal reproducible example workspace, export it to a shareable ZIP file, and attach it to the ticket. 
+        
+       Keep in mind your workspace of the project is not minimal reproducible example. Make a workspace only with elements crucial for the bug. 
+        
+       Drag the file into this area. 
+      render: shell 
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
+      label: Relevant log output (optional)
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
