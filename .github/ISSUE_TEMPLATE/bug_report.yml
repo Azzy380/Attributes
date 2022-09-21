@@ -22,7 +22,7 @@ body:
     id: version
     attributes:
       label: Generator version
-      description: What version of MCreator 
+      description: Which generator are you using?
       options:
         - Forge 1.18.2
         - Forge 1.16.5
