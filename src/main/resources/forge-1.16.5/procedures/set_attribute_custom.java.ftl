@@ -1,1 +1,1 @@
-((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${field$attribute?upper_case}.get()).setBaseValue(${input$value});
+((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${field$attribute?upper_case}).setBaseValue(${input$value});
