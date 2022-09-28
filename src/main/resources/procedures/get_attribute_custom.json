@@ -1,5 +1,5 @@
 {
-  "message0": "Get value of custom attribute %1 from %2",
+  "message0": "Get base value of custom attribute %1 from %2",
   "args0": [
     {
       "type": "field_javaname",
