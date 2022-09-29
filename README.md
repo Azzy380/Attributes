@@ -1,8 +1,17 @@
-# Attributes v2.0
+# Attributes v2.2
 Plugin allows modifying vanilla attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.2:
+- Added forge attributes
+- [BugFix] Fixed Get Base Value and Get Value for forge 1.16.5
+
+## Version 2.1:
+- Added blocks for getting whole attribute value (base value + modifiers)
+- Changed "Get value of.." to "Get base value of.." for blocks returning base value
+- Added support for Forge 1.16.5
 
 ## Version 2.0:
 - Changed to Java Plugin - you need to turn on java plugins for it to work.
