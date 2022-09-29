@@ -1,6 +1,10 @@
+<#assign attr = "">
 <#if field$attribute.startsWith("CUSTOM:")>
-<#assign attr = field$attribute?replace("CUSTOM:", "")?upper_case>
-((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${attr}.get()).setBaseValue(${input$value});
+<#assign attr = JavaModName + "Attributes." + field$attribute?replace("CUSTOM:", "")?upper_case + ".get()">
+<#elseif field$attribute.startsWith("FORGE:")>
+<#assign attr = "ForgeMod." + field$attribute?replace("FORGE:", "") + ".get()">
 <#else>
-((LivingEntity) ${input$entity}).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.${field$attribute}).setBaseValue(${input$value});
+<#assign attr = "net.minecraft.world.entity.ai.attributes.Attributes." + field$attribute>
 </#if>
+((LivingEntity) ${input$entity}).getAttribute(${attr}).setBaseValue(${input$value});
+

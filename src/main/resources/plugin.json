@@ -4,8 +4,8 @@
   "weight": 0,
   "javaplugin": "net.azzier.attributes.Launcher",
   "info": {
-    "name": "Custom attributes!!",
-    "version": "2.1",
+    "name": "Attributes",
+    "version": "2.2",
     "description": "Plugin adds attributes, attribute modifiers and custom attributes to MCreator!",
     "author": "Azzier"
   }
