@@ -1,30 +1,15 @@
 {
-  "message0": "Add new modifier of an attribute %2 to an item %1 working on the slot %3 with a value %4 and operation %5",
+  "message0": "Add modifier %1 of an attribute %2 to an item from dependencies",
   "args0": [
     {
       "type": "input_value",
-      "name": "item",
-      "check": "MCItem"
+      "name": "modifier",
+      "check": "Modifier"
     },
     {
       "type": "field_data_list_selector",
       "name": "attribute",
       "datalist": "attribute"
-    },
-    {
-      "type": "field_data_list_selector",
-      "name": "slot",
-      "datalist": "slot"
-    },
-    {
-      "type": "input_value",
-      "name": "value",
-      "check": "Number"
-    },
-    {
-      "type": "field_data_list_selector",
-      "name": "operation",
-      "datalist": "operation"
     }
   ],
   "inputsInline": true,
@@ -33,18 +18,11 @@
   "colour": 350,
   "mcreator": {
     "toolbox_id": "azz_attr",
-    "toolbox_init": [
-      "<value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value>",
-      "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
-    ],
     "fields": [
-      "attribute",
-      "slot",
-      "operation"
+      "attribute"
     ],
     "inputs": [
-      "item",
-      "value"
+      "modifier"
     ]
   }
 }

@@ -1,0 +1,1 @@
+(new AttributeModifier("${modid}." + ${input$name}, ${input$value}, AttributeModifier.Operation.${field$operation}))
