@@ -1,0 +1,36 @@
+{
+  "message0": "Create new modifier named %1 with value %2 and operation %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "name",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "operation",
+      "datalist": "operation"
+    }
+  ],
+  "inputsInline": true,
+  "colour": 350,
+  "output": "Modifier",
+  "mcreator": {
+    "toolbox_id": "azz_attr",
+    "toolbox_init": [
+      "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
+    ],
+    "fields": [
+      "operation"
+    ],
+    "inputs": [
+      "name",
+      "value"
+    ]
+  }
+}
