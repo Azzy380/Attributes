@@ -1,8 +1,15 @@
-# Attributes v2.2
+# Attributes v2.2.5
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.2.5:
+- Remade Attribute Modifiers procedures
+- Added "Calculating attribute modifiers" global trigger
+- Added "For slot..." procedure to determine equipment slot before adding modifiers
+- Added Modifier variable for attribute modifiers
+
 
 ## Version 2.2:
 - Added forge attributes
