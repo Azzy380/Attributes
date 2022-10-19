@@ -6,7 +6,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 ## Version 2.2.6:
 - Added localisation for custom attributes
-- [BugFix] fixed error while adding new modifier of a custom attribute in 1.18.2
+- [BugFix] Fixed a bug when adding a new custom attribute modifier in version 1.18.2
 
 ## Version 2.2.5:
 - Remade Attribute Modifiers procedures
