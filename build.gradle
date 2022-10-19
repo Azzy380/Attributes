@@ -10,7 +10,7 @@ if (project.hasProperty("mcreator_path")) {
 System.setProperty("user.dir", projectDir.toString())
 
 group = 'net.azzier.attributes'
-version = '1.0.0'
+version = '2.2.6'
 
 sourceCompatibility = 17
 targetCompatibility = 17
