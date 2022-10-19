@@ -33,7 +33,6 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 - Small bug fix
 - Localisation changes
 
-
 ## Version 1.1.1:
 - Added missing Movement Speed attribute.
 - Renamed plugin to Attributes.
