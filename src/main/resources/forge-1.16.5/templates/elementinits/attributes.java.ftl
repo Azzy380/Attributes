@@ -13,7 +13,7 @@ import java.util.Map;
     public final static List <Supplier<Attribute>> attributes = new ArrayList<>();
 
     <#list attributes as attribute>
-    public static final Attribute ${attribute.getModElement().getRegistryNameUpper()} = new RangedAttribute("${attribute.description}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue}).setShouldWatch(true);
+    public static final Attribute ${attribute.getModElement().getRegistryNameUpper()} = new RangedAttribute("attribute.${modid}.${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue}).setShouldWatch(true);
     </#list>
 
    @SubscribeEvent
