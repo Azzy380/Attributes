@@ -20,18 +20,32 @@ package ${package}.init;
         });
     }
 
-   @SubscribeEvent
-   public static void addAttributes(EntityAttributeModificationEvent event) {
-       <#list attributes as attribute>
-           <#list attribute.entities as entity>
-               <#assign e = generator.map(entity.getUnmappedValue(), "entities", 1)!"null">
-               <#if e != "null">
-               event.add(${e}, ${attribute.getModElement().getRegistryNameUpper()}.get());
-               </#if>
-           </#list>
+    @SubscribeEvent
+    public static void addAttributes(EntityAttributeModificationEvent event) {
+        <#list attributes as attribute>
+            <#list attribute.entities as entity>
+                <#assign e = generator.map(entity.getUnmappedValue(), "entities", 1)!"null">
+                <#if e != "null">
+                event.add(${e}, ${attribute.getModElement().getRegistryNameUpper()}.get());
+                </#if>
+            </#list>
+        </#list>
+    }
 
-       </#list>
-   }
-
+    @Mod.EventBusSubscriber
+    private class Utils {
+        // TODO - persistent attributes
+        <#if attributes?filter(a -> a.isPersistent = true && a.entities?seq_contains("Player"))?size != 0>
+        @SubscribeEvent
+        public static void saveAttributes(PlayerEvent.Clone event) {
+            Player oldP = event.getOriginal();
+            Player newP = (Player)event.getEntity();
+            <#list attributes?filter(a -> a.isPersistent = true && a.entities?seq_contains("Player")) as attribute>
+                if(newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()) != null)
+                    newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).getBaseValue());
+            </#list>
+        }
+        </#if>
+    }
 }
 <#-- @formatter:on -->
