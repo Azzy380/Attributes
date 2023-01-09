@@ -37,5 +37,7 @@ import java.util.Map;
        </#list>
    }
 
+   <#assign persistentAttributes = []>
+
 }
 <#-- @formatter:on -->
