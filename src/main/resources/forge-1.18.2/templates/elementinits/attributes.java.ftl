@@ -9,7 +9,7 @@ package ${package}.init;
     public static final DeferredRegister<Attribute>REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, ${JavaModName}.MODID);
 
     <#list attributes as attribute>
-    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute("attribute." + ${JavaModName}.MODID + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
+    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute(${JavaModName}.MODID + ".attribute" + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
     </#list>
 
 
@@ -30,22 +30,6 @@ package ${package}.init;
                 </#if>
             </#list>
         </#list>
-    }
-
-    @Mod.EventBusSubscriber
-    private class Utils {
-        // TODO - persistent attributes
-        <#if attributes?filter(a -> a.isPersistent = true && a.entities?seq_contains("Player"))?size != 0>
-        @SubscribeEvent
-        public static void saveAttributes(PlayerEvent.Clone event) {
-            Player oldP = event.getOriginal();
-            Player newP = (Player)event.getEntity();
-            <#list attributes?filter(a -> a.isPersistent = true && a.entities?seq_contains("Player")) as attribute>
-                if(newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()) != null)
-                    newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).getBaseValue());
-            </#list>
-        }
-        </#if>
     }
 }
 <#-- @formatter:on -->
