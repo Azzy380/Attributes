@@ -9,7 +9,7 @@ package ${package}.init;
     public static final DeferredRegister<Attribute>REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, ${JavaModName}.MODID);
 
     <#list attributes as attribute>
-    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute("attribute." + ${JavaModName}.MODID + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
+    public static final RegistryObject<Attribute> ${attribute.getModElement().getRegistryNameUpper()} = REGISTRY.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute(${JavaModName}.MODID + ".attribute" + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
     </#list>
 
 
@@ -20,18 +20,30 @@ package ${package}.init;
         });
     }
 
-   @SubscribeEvent
-   public static void addAttributes(EntityAttributeModificationEvent event) {
-       <#list attributes as attribute>
-           <#list attribute.entities as entity>
-               <#assign e = generator.map(entity.getUnmappedValue(), "entities", 1)!"null">
-               <#if e != "null">
-               event.add(${e}, ${attribute.getModElement().getRegistryNameUpper()}.get());
-               </#if>
-           </#list>
+    @SubscribeEvent
+    public static void addAttributes(EntityAttributeModificationEvent event) {
+        <#list attributes as attribute>
+            <#list attribute.entities as entity>
+                <#assign e = generator.map(entity.getUnmappedValue(), "entities", 1)!"null">
+                <#if e != "null">
+                event.add(${e}, ${attribute.getModElement().getRegistryNameUpper()}.get());
+                </#if>
+            </#list>
+        </#list>
+    }
 
-       </#list>
-   }
-
+    <#if attributes?filter(a -> a.isPersistent && a.entities?seq_contains("Player"))?size != 0>
+    @Mod.EventBusSubscriber
+        private class Utils {
+            @SubscribeEvent
+            public static void persistAttributes(PlayerEvent.Clone event) {
+                Player oldP = event.getOriginal();
+                Player newP = (Player)event.getEntity();
+                <#list attributes?filter(a -> a.isPersistent = true) as attribute>
+                newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).getBaseValue());
+                </#list>
+            }
+    }
+    </#if>
 }
 <#-- @formatter:on -->

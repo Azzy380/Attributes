@@ -36,6 +36,19 @@ import java.util.Map;
 
        </#list>
    }
+   <#if attributes?filter(a -> a.isPersistent && a.entities?seq_contains("PlayerEntity"))?size != 0>
+       @Mod.EventBusSubscriber
+           private static class Utils {
+               @SubscribeEvent
+               public static void persistAttributes(PlayerEvent.Clone event) {
+                   PlayerEntity oldP = event.getOriginal();
+                   PlayerEntity newP = (PlayerEntity)event.getEntity();
+                   <#list attributes?filter(a -> a.isPersistent = true) as attribute>
+                   newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}).getBaseValue());
+                   </#list>
+               }
 
+       }
+   </#if>
 }
 <#-- @formatter:on -->

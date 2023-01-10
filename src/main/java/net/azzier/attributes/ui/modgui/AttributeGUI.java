@@ -13,6 +13,7 @@ import net.mcreator.ui.validation.component.VTextField;
 import net.mcreator.ui.validation.validators.TextFieldValidator;
 import net.mcreator.util.StringUtils;
 import net.mcreator.workspace.elements.ModElement;
+import org.apache.logging.log4j.core.tools.picocli.CommandLine;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +27,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
     private final JSpinner minValue = new JSpinner(new SpinnerNumberModel(0.0, -2000000000.0, 2000000000.0, 1.0));
     private final JSpinner maxValue = new JSpinner(new SpinnerNumberModel(0.0, -2000000000.0, 2000000000.0, 1.0));
     private final JEntries entities = new JEntries(this.mcreator, this);
+    private final JCheckBox isPersistent = L10N.checkbox("elementgui.attribute.isPersistent");
     private final ValidationGroup page1group = new ValidationGroup();
 
     public AttributeGUI(MCreator mcreator, ModElement element, boolean editingMode) {
@@ -54,6 +56,8 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         selp.add(this.minValue);
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/maxValue"), L10N.label("elementgui.attribute.maxValue", new Object[0])));
         selp.add(this.maxValue);
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/isPersistent"), isPersistent));
+        selp.add(this.isPersistent);
         pane1.add(PanelUtils.totalCenterInPanel(selp));
         this.description.setValidator(new TextFieldValidator(this.description, L10N.t("elementgui.attribute.needs_description", new Object[0])));
         this.description.enableRealtimeValidation();
@@ -84,6 +88,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         this.minValue.setValue(attribute.minValue);
         this.maxValue.setValue(attribute.maxValue);
         this.entities.setEntities(attribute.entities);
+        this.isPersistent.setSelected(attribute.isPersistent);
     }
 
     /**
@@ -98,6 +103,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         attribute.minValue = (Double) this.minValue.getValue();
         attribute.maxValue = (Double) this.maxValue.getValue();
         attribute.entities = this.entities.getEntities();
+        attribute.isPersistent = this.isPersistent.isSelected();
 
         return attribute;
     }

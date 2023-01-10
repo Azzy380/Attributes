@@ -31,6 +31,10 @@ public class Attribute extends GeneratableElement {
      */
     public Double defaultValue;
     /**
+     * If attribute base value should stay after death
+     */
+    public Boolean isPersistent;
+    /**
      * List of entities that will have this attribute added
      */
     public List<EntityEntry> entities;
