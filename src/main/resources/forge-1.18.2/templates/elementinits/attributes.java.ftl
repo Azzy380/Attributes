@@ -31,5 +31,19 @@ package ${package}.init;
             </#list>
         </#list>
     }
+
+    <#if attributes?filter(a -> a.isPersistent && a.entities?seq_contains("Player"))?size != 0>
+    @Mod.EventBusSubscriber
+        private class Utils {
+            @SubscribeEvent
+            public static void persistAttributes(PlayerEvent.Clone event) {
+                Player oldP = event.getOriginal();
+                Player newP = (Player)event.getEntity();
+                <#list attributes?filter(a -> a.isPersistent = true) as attribute>
+                newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}.get()).getBaseValue());
+                </#list>
+            }
+    }
+    </#if>
 }
 <#-- @formatter:on -->
