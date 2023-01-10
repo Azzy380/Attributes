@@ -1,8 +1,15 @@
-# Attributes v2.2.6
+# Attributes v2.2.7
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.2.7:
+- Added Forge 1.19.2 support
+- Added Forge Attributes: Step Height Addition, Attack Range
+- Added Player persistent custom attributes
+- Added Remove Modifier
+- [BugFix] Fixed attriute modifiers (when creating new modifiers, UUID has to be static set)
 
 ## Version 2.2.6:
 - Added localisation for custom attributes
