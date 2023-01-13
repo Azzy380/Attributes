@@ -4,12 +4,16 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 #### Full releases you can download through Releases tab.
 
+## Version 2.2.7a:
+- Removed not supported procedure blocks
+- [BugFix] Fixed attribute procedures trying to work on non living entities (like chests etc.)
+
 ## Version 2.2.7:
 - Added Forge 1.19.2 support
 - Added Forge Attributes: Step Height Addition, Attack Range
 - Added Player persistent custom attributes
 - Added Remove Modifier
-- [BugFix] Fixed attriute modifiers (when creating new modifiers, UUID has to be static set)
+- Rewoked attriute modifiers (when creating new modifiers, UUID has to be static set)
 
 ## Version 2.2.6:
 - Added localisation for custom attributes
