@@ -6,7 +6,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 ## Version 2.2.7a:
 - Removed not supported procedure blocks
-- [BugFix] Fixed attribute procedures trying to work on non living entities (like chests etc.)
+- [HotFix] Fixed attribute procedures trying to work on non living entities (like chests etc.)
 
 ## Version 2.2.7:
 - Added Forge 1.19.2 support
