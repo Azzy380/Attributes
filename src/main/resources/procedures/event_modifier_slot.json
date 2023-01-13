@@ -18,7 +18,6 @@
   "mcreator": {
     "toolbox_id": "azz_attr",
     "toolbox_init": [
-      "<value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value>"
     ],
     "fields": [
       "slot"

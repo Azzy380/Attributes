@@ -1,1 +1,1 @@
-((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${field$attribute?upper_case}).getValue()
+((entity instanceof LivingEntity) ? ((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${field$attribute?upper_case}).getValue() : -1)

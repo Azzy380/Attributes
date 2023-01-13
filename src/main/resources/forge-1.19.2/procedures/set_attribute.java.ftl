@@ -6,5 +6,4 @@
 <#else>
 <#assign attr = "net.minecraft.world.entity.ai.attributes.Attributes." + field$attribute>
 </#if>
-((LivingEntity) ${input$entity}).getAttribute(${attr}).setBaseValue(${input$value});
-
+if(entity instanceof LivingEntity) ((LivingEntity) ${input$entity}).getAttribute(${attr}).setBaseValue(${input$value});
