@@ -1,8 +1,11 @@
-# Attributes v2.2.7a
+# Attributes v2.2.7b
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.2.7b:
+- [HotFix] Fixed casting error in "get attribute value" in Forge 1.16.5
 
 ## Version 2.2.7a:
 - Removed not supported procedure blocks
