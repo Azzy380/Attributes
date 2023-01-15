@@ -1,0 +1,36 @@
+{
+  "message0": "has %1 attribute %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "entity",
+      "check": "Entity"
+    },
+    {
+      "type": "field_data_list_selector",
+      "name": "attribute",
+      "datalist": "attribute"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": "%{BKY_LOGIC_HUE}",
+  "mcreator": {
+    "toolbox_id": "azz_attr",
+    "toolbox_init": [
+      "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>"
+    ],
+    "fields": [
+      "attribute"
+    ],
+    "inputs": [
+      "entity"
+    ],
+    "dependencies": [
+      {
+        "type": "entity",
+        "name": "entity"
+      }
+    ]
+  }
+}

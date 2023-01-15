@@ -1,8 +1,15 @@
-# Attributes v2.2.7a
+# Attributes v2.2.8
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.2.8:
+- added "has attribute" to fix error while modifying attributes in some global trigers. NOTE: User has to make sure given entity is LivingEntity and use this to check if it has attribute.
+- removed casting checks in multiple procedures.****
+
+## Version 2.2.7b:
+- [HotFix] Fixed casting error in "get attribute value" in Forge 1.16.5
 
 ## Version 2.2.7a:
 - Removed not supported procedure blocks
