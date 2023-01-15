@@ -5,8 +5,8 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 #### Full releases you can download through Releases tab.
 
 ## Version 2.2.8:
-- added "has attribute" to fix error while modifying attributes in some global trigers. NOTE: User has to make sure given entity is LivingEntity and use this to check if it has attribute.
-- removed casting checks in multiple procedures.
+- added "has attribute" to fix error while modifying attributes in some global trigers.
+- removed casting checks in multiple procedures (use "is (sub) type of Living Entity" and "has attribute" to check if can set/get attribute). 
 
 ## Version 2.2.7b:
 - [HotFix] Fixed casting error in "get attribute value" in Forge 1.16.5
