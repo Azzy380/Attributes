@@ -41,7 +41,7 @@ public class Launcher extends JavaPlugin {
      * @param event
      */
     private static void register(PreGeneratorsLoadingEvent event) {
-        ATTRIBUTE = ModElementTypeLoader.register(new ModElementType("attribute", (Character) null, BaseType.OTHER, RecipeType.BLOCK, AttributeGUI::new, Attribute.class));
+        ATTRIBUTE = ModElementTypeLoader.register(new ModElementType("attribute", (Character) null, BaseType.OTHER, RecipeType.NONE, AttributeGUI::new, Attribute.class));
         LOG.debug("Registered Attribute Mod Element");
     }
 }

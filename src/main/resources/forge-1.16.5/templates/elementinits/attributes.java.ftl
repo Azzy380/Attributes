@@ -8,22 +8,16 @@ import java.util.Map;
 
 
 @Mod.EventBusSubscriber (bus = Mod.EventBusSubscriber.Bus.MOD) public class ${JavaModName}Attributes {
-    //public static final DeferredRegister<Attribute>REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, "${modid}");
-
-    public final static List <Supplier<Attribute>> attributes = new ArrayList<>();
-
     <#list attributes as attribute>
     public static final Attribute ${attribute.getModElement().getRegistryNameUpper()} = new RangedAttribute("attribute.${modid}.${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue}).setShouldWatch(true);
     </#list>
-
    @SubscribeEvent
    	public static void register(RegistryEvent.Register<Attribute> event) {
    	<#list attributes as attribute>
-   		attributes.add(() -> ${attribute.getModElement().getRegistryNameUpper()}.setRegistryName("${modid}", "${attribute.getModElement().getRegistryName().toLowerCase()}"));
+   	    ${attribute.getModElement().getRegistryNameUpper()}.setRegistryName("${modid}", "${attribute.getModElement().getRegistryName().toLowerCase()}");
+   		event.getRegistry().register(${attribute.getModElement().getRegistryNameUpper()});
    	 </#list>
-   		event.getRegistry().registerAll(attributes.stream().map(Supplier::get).toArray(Attribute[]::new));
    	}
-
    @SubscribeEvent
    public static void addAttributes(EntityAttributeModificationEvent event) {
        <#list attributes as attribute>
@@ -43,7 +37,7 @@ import java.util.Map;
                public static void persistAttributes(PlayerEvent.Clone event) {
                    PlayerEntity oldP = event.getOriginal();
                    PlayerEntity newP = (PlayerEntity)event.getEntity();
-                   <#list attributes?filter(a -> a.isPersistent = true) as attribute>
+                   <#list attributes?filter(a -> a.isPersistent = true && a.entities?seq_contains("PlayerEntity")) as attribute>
                    newP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}).setBaseValue(oldP.getAttribute(${attribute.getModElement().getRegistryNameUpper()}).getBaseValue());
                    </#list>
                }
