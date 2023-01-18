@@ -49,7 +49,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         selp.setOpaque(false);
         this.isPersistent.setOpaque(false);
         selp.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1),
-                L10N.t("elementgui.attribute.boarder", new Object[0]),
+                L10N.t("elementgui.attribute.border", new Object[0]),
                 0, 0, this.getFont().deriveFont(12.0F), (Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
 
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elementgui.attribute.description", new Object[0])));
