@@ -2,6 +2,8 @@ name: Bug Report
 description: File a bug report
 title: "[Bug]: "
 labels: ["bug"]
+assignees:
+  - azzy380
 body:
   - type: markdown
     attributes:
@@ -22,6 +24,7 @@ body:
       label: Generator version
       description: Which generator are you using?
       options:
+        - Forge 1.19.2
         - Forge 1.18.2
         - Forge 1.16.5
     validations:
