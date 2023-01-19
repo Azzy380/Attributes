@@ -27,7 +27,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
     private final JSpinner minValue = new JSpinner(new SpinnerNumberModel(0.0, -2000000000.0, 2000000000.0, 1.0));
     private final JSpinner maxValue = new JSpinner(new SpinnerNumberModel(0.0, -2000000000.0, 2000000000.0, 1.0));
     private final JEntries entities = new JEntries(this.mcreator, this);
-    private final JCheckBox isPersistent = L10N.checkbox("elementgui.attribute.isPersistent");
+    private final JCheckBox isPersistent = L10N.checkbox("elementgui.common.enable");
     private final ValidationGroup page1group = new ValidationGroup();
 
     public AttributeGUI(MCreator mcreator, ModElement element, boolean editingMode) {
@@ -45,8 +45,12 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         pane1.setOpaque(false);
         JPanel pane2 = new JPanel(new BorderLayout());
         pane2.setOpaque(false);
-        JPanel selp = new JPanel(new GridLayout(13, 2, 100, 2));
+        JPanel selp = new JPanel(new GridLayout(5, 2, 5, 3));
         selp.setOpaque(false);
+        this.isPersistent.setOpaque(false);
+        selp.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1),
+                L10N.t("elementgui.attribute.border", new Object[0]),
+                0, 0, this.getFont().deriveFont(12.0F), (Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
 
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elementgui.attribute.description", new Object[0])));
         selp.add(this.description);
@@ -56,7 +60,8 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         selp.add(this.minValue);
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/maxValue"), L10N.label("elementgui.attribute.maxValue", new Object[0])));
         selp.add(this.maxValue);
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/isPersistent"), isPersistent));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/isPersistent"),
+                L10N.label("elementgui.attribute.isPersistent")));
         selp.add(this.isPersistent);
         pane1.add(PanelUtils.totalCenterInPanel(selp));
         this.description.setValidator(new TextFieldValidator(this.description, L10N.t("elementgui.attribute.needs_description", new Object[0])));
