@@ -1,5 +1,4 @@
 {
-  "message0": "Add modifier %1 of a custom attribute %2 to an item from dependencies",
   "args0": [
     {
       "type": "input_value",

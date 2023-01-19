@@ -1,5 +1,4 @@
 {
-  "message0": "Set base value of custom attribute %1 of %2 to %3",
   "args0": [
     {
       "type": "field_javaname",

@@ -1,5 +1,4 @@
 {
-  "message0": "Create new modifier with UUID %1 named %2 with value %3 and operation %4",
   "args0": [
     {
       "type": "input_value",

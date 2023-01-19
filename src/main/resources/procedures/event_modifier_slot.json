@@ -1,5 +1,4 @@
 {
-  "message0": "For slot %1 do %2 (Use Calculating Attribute Modifiers trigger)",
   "args0": [
     {
       "type": "field_data_list_selector",
