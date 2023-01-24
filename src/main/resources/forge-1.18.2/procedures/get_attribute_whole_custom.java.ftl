@@ -1,1 +1,0 @@
-((LivingEntity) ${input$entity}).getAttribute(${JavaModName}Attributes.${field$attribute?upper_case}.get()).getValue()
