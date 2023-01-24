@@ -5,7 +5,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 #### Full releases you can download through Releases tab.
 
 ## Version 2.3.0:
-- Changed Cunstom Attribute GUI and some localisation (thanks @NerdyPuzzle :>)
+- Changed Custom Attribute GUI and some localisation (thanks @NerdyPuzzle :>)
 - Added blocks allowing getting/setting and add modifiers to attribute from other mods by using modid:attribute
 - Moved procedure translations into texts file.
 
