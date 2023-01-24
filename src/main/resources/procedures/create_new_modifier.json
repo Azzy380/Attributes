@@ -28,7 +28,7 @@
     "toolbox_id": "azz_attr",
     "toolbox_init": [
       "<value name=\"modifierid\"><block type=\"text\"><field name=\"TEXT\">you can generate random uuid here: www.uuidtools.com/minecraft</field></block></value>",
-      "<value name=\"name\"><block type=\"text\"><field name=\"TEXT\">modifier name</field></block></value>",
+      "<value name=\"name\"><block type=\"text\"><field name=\"TEXT\">modifier_name</field></block></value>",
       "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
     ],
     "fields": [
