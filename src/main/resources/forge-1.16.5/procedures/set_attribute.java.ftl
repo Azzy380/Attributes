@@ -1,6 +1,6 @@
 <#assign attr = "">
 <#if field$attribute.startsWith("CUSTOM:")>
-<#assign attr = JavaModName + "Attributes." + field$attribute?replace("CUSTOM:", "")?upper_case + ".get()">
+<#assign attr = JavaModName + "Attributes." + field$attribute?replace("CUSTOM:", "")?upper_case>
 <#elseif field$attribute.startsWith("FORGE:")>
 <#assign attr = "ForgeMod." + field$attribute?replace("FORGE:", "") + ".get()">
 <#else>
