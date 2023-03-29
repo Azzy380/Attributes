@@ -8,7 +8,8 @@
     {
       "type": "field_data_list_selector",
       "name": "attribute",
-      "datalist": "attribute"
+      "datalist": "attribute",
+      "customEntryProviders": "attribute"
     }
   ],
   "inputsInline": true,

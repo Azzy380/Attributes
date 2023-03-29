@@ -1,11 +1,11 @@
 {
   "id": "azz_tools",
-  "minversion": 202200200000,
+  "minversion": 202300100000,
   "weight": 0,
   "javaplugin": "net.azzier.attributes.Launcher",
   "info": {
     "name": "Attributes",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Plugin adds attributes, attribute modifiers and custom attributes to MCreator!",
     "author": "Azzier"
   }
