@@ -1,8 +1,14 @@
-# Attributes v2.3.0
+# Attributes v2.3.1
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.3.1:
+- Added compatibility with MCreator 2023.1 Snapshot (previous versions are now incompatible)
+- Added custom attribute into data fields in procedure blocks
+- Removed seperate procedures for custom attributes
+- [BugFix] Fixed custom attribute name in item attribute modifiers
 
 ## Version 2.3.0:
 - Changed Custom Attribute GUI and some localisation (thanks @NerdyPuzzle :>)
