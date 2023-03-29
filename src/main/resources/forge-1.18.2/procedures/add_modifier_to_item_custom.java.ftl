@@ -1,1 +1,0 @@
-_event.addModifier(${JavaModName}Attributes.${field$attribute?upper_case}.get(), ${input$modifier});

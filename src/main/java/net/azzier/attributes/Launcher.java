@@ -5,7 +5,6 @@ import net.azzier.attributes.ui.modgui.AttributeGUI;
 import net.mcreator.element.BaseType;
 import net.mcreator.element.ModElementType;
 import net.mcreator.element.ModElementTypeLoader;
-import net.mcreator.element.RecipeType;
 import net.mcreator.element.types.Procedure;
 import net.mcreator.plugin.JavaPlugin;
 import net.mcreator.plugin.Plugin;
@@ -41,7 +40,7 @@ public class Launcher extends JavaPlugin {
      * @param event
      */
     private static void register(PreGeneratorsLoadingEvent event) {
-        ATTRIBUTE = ModElementTypeLoader.register(new ModElementType("attribute", (Character) null, BaseType.OTHER, RecipeType.NONE, AttributeGUI::new, Attribute.class));
+        ATTRIBUTE = ModElementTypeLoader.register(new ModElementType("attribute", (Character) null, BaseType.OTHER, AttributeGUI::new, Attribute.class));
         LOG.debug("Registered Attribute Mod Element");
     }
 }

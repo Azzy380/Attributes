@@ -1,8 +1,13 @@
-# Attributes v2.2.9
+# Attributes v2.3.0
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.3.0:
+- Changed Custom Attribute GUI and some localisation (thanks @NerdyPuzzle :>)
+- Added blocks allowing getting/setting and add modifiers to attribute from other mods by using modid:attribute
+- Moved procedure translations into texts file.
 
 ## Version 2.2.9:
 - Small code reorganisation
