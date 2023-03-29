@@ -8,7 +8,7 @@ package ${package}.init;
 @Mod.EventBusSubscriber (bus = Mod.EventBusSubscriber.Bus.MOD) public class ${JavaModName}Attributes {
     public static final DeferredRegister<Attribute>ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, ${JavaModName}.MODID);
     <#list attributes as attribute>
-    public static final RegistryObject<Attribute>${attribute.getModElement().getRegistryNameUpper()} = ATTRIBUTES.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute(${JavaModName}.MODID + ".attribute" + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
+    public static final RegistryObject<Attribute>${attribute.getModElement().getRegistryNameUpper()} = ATTRIBUTES.register("${attribute.getModElement().getRegistryName().toLowerCase()}", () -> (new RangedAttribute( "attribute." + ${JavaModName}.MODID + ".${attribute.getModElement().getRegistryName()}", ${attribute.defaultValue}, ${attribute.minValue}, ${attribute.maxValue})).setSyncable(true));
     </#list>
     @SubscribeEvent
     public static void register(FMLConstructModEvent event) {
