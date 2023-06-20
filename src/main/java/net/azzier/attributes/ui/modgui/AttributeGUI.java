@@ -13,10 +13,11 @@ import net.mcreator.ui.validation.component.VTextField;
 import net.mcreator.ui.validation.validators.TextFieldValidator;
 import net.mcreator.util.StringUtils;
 import net.mcreator.workspace.elements.ModElement;
-import org.apache.logging.log4j.core.tools.picocli.CommandLine;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GUI for creating new {@link net.azzier.attributes.element.types.Attribute}
@@ -114,6 +115,17 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
     }
 
     protected AggregatedValidationResult validatePage(int page) {
+        List<String> messages = new ArrayList<String>();
+        if((double)this.minValue.getValue() > (double)this.defaultValue.getValue())
+            messages.add(L10N.t("elementgui.attribute.warning.minDefault"));
+        if((double)this.maxValue.getValue() < (double)this.defaultValue.getValue())
+            messages.add(L10N.t("elementgui.attribute.warning.maxDefault"));
+        if ((double)this.maxValue.getValue() < (double)this.minValue.getValue())
+            messages.add(L10N.t("elementgui.attribute.warning.minMax"));
+        if(messages.size() == 1)
+            return new AggregatedValidationResult.FAIL(messages.get(0));
+        else if(messages.size() > 1)
+            return new AggregatedValidationResult.MULTIFAIL(messages);
         return new AggregatedValidationResult(new ValidationGroup[]{this.page1group});
     }
 }
