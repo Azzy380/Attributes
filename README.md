@@ -1,8 +1,14 @@
-# Attributes v2.3.1
+
+# Attributes v2.3.2
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.3.2:
+- Added Forge 1.19.4 support.
+- Added checks on values in an attribute mod element.
+- [BugFix] Fixed `has attribute` code syntax, preventing from negating it.
 
 ## Version 2.3.1:
 - Added compatibility with MCreator 2023.1 Snapshot (previous versions are now incompatible)
@@ -17,7 +23,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 ## Version 2.2.9:
 - Small code reorganisation
-- [BugFix] Added casting check in "Has attribute" procedure
+- [BugFix] Added casting check in "has attribute" procedure
 - [BugFix] Added a check in Player Persistent Custom Attributes.
 
 ## Version 2.2.8:
