@@ -1,7 +1,6 @@
 {
   "id": "azz_tools",
-  "minversion": 202300100000,
-  "weight": 0,
+  "minversion": 202200300000,
   "javaplugin": "net.azzier.attributes.Launcher",
   "info": {
     "name": "Attributes",
