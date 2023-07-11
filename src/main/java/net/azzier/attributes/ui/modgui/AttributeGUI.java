@@ -31,6 +31,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
     private final JCheckBox isPersistent = L10N.checkbox("elementgui.common.enable");
     private final ValidationGroup page1group = new ValidationGroup();
 
+
     public AttributeGUI(MCreator mcreator, ModElement element, boolean editingMode) {
         super(mcreator, element, editingMode);
         this.initGUI();

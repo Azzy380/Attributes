@@ -1,6 +1,0 @@
-defaultvalue: null
-scopes:
-  local:
-    init: AttributeModifier ${var.getName()} = ${var.getType().getDefaultValue(generator.getWorkspace())};
-    get: ${name}
-    set: ${name} = ${opt.removeParentheses(value)};
