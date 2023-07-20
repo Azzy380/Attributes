@@ -1,8 +1,13 @@
-# Attributes v2.3.3
+# Attributes v2.3.4
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
 #### Full releases you can download through Releases tab.
+
+## Version 2.3.4:
+- Added dependency requirement to crete_new_modifier procedure (procedure is for one specific trigger)
+- [BugFix] Fixed a bug when custom attribute registry name contained an underscore `_`and procedures looking for it without this underscore
+- [BugFix] Removed unnecessary dependency requirements from procedures
 
 ## Version 2.3.3:
 - Removed support for 1.16.5
