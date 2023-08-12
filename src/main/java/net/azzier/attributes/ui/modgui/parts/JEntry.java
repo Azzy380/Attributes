@@ -1,6 +1,8 @@
 package net.azzier.attributes.ui.modgui.parts;
 
+import net.azzier.attributes.utils.EntityUtils;
 import net.mcreator.element.parts.EntityEntry;
+import net.mcreator.minecraft.DataListEntry;
 import net.mcreator.minecraft.ElementUtil;
 import net.mcreator.ui.MCreator;
 import net.mcreator.ui.component.SearchableComboBox;
@@ -13,6 +15,7 @@ import net.mcreator.workspace.Workspace;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Single entity entry in {@link net.azzier.attributes.ui.modgui.parts.JEntries}
@@ -28,7 +31,8 @@ public class JEntry extends JPanel {
         parent.add(container);
         entryList.add(this);
 
-        ElementUtil.loadAllEntities(this.workspace).forEach((e) -> {
+        List<DataListEntry> entities = EntityUtils.loadEntities(this.workspace);
+        entities.forEach((e) -> {
             this.entityType.addItem(e.getName());
         });
         this.add(L10N.label("dialog.spawn_list_entry.entity", new Object[0]));
