@@ -1,3 +1,9 @@
+- EntityAnimal:
+  readable_name: "Animal"
+- EntityAgeable:
+  readable_name: "Ageable Mob"
+- EntityAmbientCreature:
+  readable_name: "Ambient Creature"
 - EntityBat:
   readable_name: "Bat"
   type: spawnable
@@ -55,6 +61,8 @@
 - EntityFireball:
   readable_name: "Fireball"
   type: spawnable
+- EntityFlying:
+  readable_name: "Flying Mob"
 - EntityFox:
   readable_name: "Fox"
   type: spawnable
@@ -93,6 +101,10 @@
 - EntityMagmaCube:
   readable_name: "Magma cube"
   type: spawnable
+- EntityMob:
+  readable_name: "Mob"
+- EntityMonster:
+  readable_name: "Monster"
 - EntityMooshroom:
   readable_name: "Mooshroom"
   type: spawnable
@@ -200,6 +212,8 @@
 - EntityWanderingTrader:
   readable_name: "Wandering trader"
   type: spawnable
+- EntityWaterMob:
+  readable_name: "Water Mob"
 - EntityWitch:
   readable_name: "Witch"
   type: spawnable
