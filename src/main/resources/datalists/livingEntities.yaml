@@ -114,9 +114,6 @@
 - EntityOcelot:
   readable_name: "Ocelot"
   type: spawnable
-- EntityPainting:
-  readable_name: "Painting"
-  type: spawnable
 - EntityPanda:
   readable_name: "Panda"
   type: spawnable
