@@ -7,6 +7,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 - Added possibility do add attribute to all Monsters, Animals, Water Animals, Golem Mobs, Ambient Creatures
 - Added entity attribute modifiers
 - Removed depenency from create new modifier
+- Localisation changes
 
 ## Version 2.3.4:
 - Added dependency requirement to crete_new_modifier procedure (procedure is for one specific trigger)
