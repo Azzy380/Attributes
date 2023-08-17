@@ -1,12 +1,12 @@
 - CHEST:
-  readable_name: "CHEST"
+  readable_name: "Chest"
 - FEET:
-  readable_name: "FEET"
+  readable_name: "Feet"
 - HEAD:
-  readable_name: "HEAD"
+  readable_name: "Head"
 - LEGS:
-  readable_name: "LEGS"
+  readable_name: "Legs"
 - MAINHAND:
-  readable_name: "MAINHAND"
+  readable_name: "Mainhand"
 - OFFHAND:
-  readable_name: "OFFHAND"
+  readable_name: "Offhand"
