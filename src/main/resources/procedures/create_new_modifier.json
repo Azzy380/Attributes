@@ -38,12 +38,6 @@
       "modifierid",
       "name",
       "value"
-    ],
-    "dependencies": [
-      {
-        "type": "itemstack",
-        "name": "itemstack"
-      }
     ]
   }
 }

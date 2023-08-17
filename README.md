@@ -1,8 +1,13 @@
-# Attributes v2.3.4
+# Attributes v2.3.5
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
 
-#### Full releases you can download through Releases tab.
+## Version 2.3.5:
+- Limited the available entities in the gui to being LivingEntites
+- Added possibility do add attribute to all Monsters, Animals, Water Animals, Golem Mobs, Ambient Creatures
+- Added entity attribute modifiers
+- Removed depenency from create new modifier
+- Localisation changes
 
 ## Version 2.3.4:
 - Added dependency requirement to crete_new_modifier procedure (procedure is for one specific trigger)
