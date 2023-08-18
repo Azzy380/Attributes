@@ -24,9 +24,9 @@ body:
       label: Generator version
       description: Which generator are you using?
       options:
+        - Forge 1.19.4
         - Forge 1.19.2
         - Forge 1.18.2
-        - Forge 1.16.5
     validations:
       required: true
   - type: textarea
