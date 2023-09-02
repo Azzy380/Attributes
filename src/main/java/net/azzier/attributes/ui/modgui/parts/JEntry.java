@@ -3,7 +3,6 @@ package net.azzier.attributes.ui.modgui.parts;
 import net.azzier.attributes.utils.EntityUtils;
 import net.mcreator.element.parts.EntityEntry;
 import net.mcreator.minecraft.DataListEntry;
-import net.mcreator.minecraft.ElementUtil;
 import net.mcreator.ui.MCreator;
 import net.mcreator.ui.component.SearchableComboBox;
 import net.mcreator.ui.component.util.PanelUtils;
@@ -15,7 +14,7 @@ import net.mcreator.workspace.Workspace;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.Objects;
 
 /**
  * Single entity entry in {@link net.azzier.attributes.ui.modgui.parts.JEntries}
@@ -24,8 +23,9 @@ public class JEntry extends JPanel {
     private final JComboBox<String> entityType = new SearchableComboBox();
     private final Workspace workspace;
 
+    @SuppressWarnings("unused")
     public JEntry(MCreator mcreator, IHelpContext gui, JPanel parent, List<JEntry> entryList) {
-        super(new FlowLayout(0));
+        super(new FlowLayout(FlowLayout.LEFT));
         this.workspace = mcreator.getWorkspace();
         JComponent container = PanelUtils.expandHorizontally(this);
         parent.add(container);
@@ -35,11 +35,11 @@ public class JEntry extends JPanel {
         entities.forEach((e) -> {
             this.entityType.addItem(e.getName());
         });
-        this.add(L10N.label("dialog.spawn_list_entry.entity", new Object[0]));
+        this.add(L10N.label("dialog.spawn_list_entry.entity"));
         this.add(this.entityType);
 
         JButton remove = new JButton(UIRES.get("16px.clear"));
-        remove.setText(L10N.t("dialog.entity_list_entry.remove_entity", new Object[0]));
+        remove.setText(L10N.t("dialog.entity_list_entry.remove_entity"));
         remove.addActionListener((e) -> {
             parent.remove(container);
             entryList.remove(this);
@@ -53,8 +53,7 @@ public class JEntry extends JPanel {
     }
 
     public EntityEntry getEntity() {
-        EntityEntry e = new EntityEntry(this.workspace, this.entityType.getSelectedItem().toString());
-        return e;
+        return new EntityEntry(this.workspace, Objects.requireNonNull(this.entityType.getSelectedItem()).toString());
     }
 
     public void setEntity(EntityEntry e) {

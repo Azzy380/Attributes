@@ -1,12 +1,10 @@
 package net.azzier.attributes.utils;
 
-import net.mcreator.element.BaseType;
 import net.mcreator.minecraft.DataListEntry;
 import net.mcreator.minecraft.DataListLoader;
 import net.mcreator.minecraft.ElementUtil;
 import net.mcreator.workspace.Workspace;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 

@@ -2,7 +2,9 @@
   "attributes": {
     "latest": "2.3.6",
     "changes": [
-      "Added Forge 1.20.1 support"
+      "Added Forge 1.20.1 support",
+      "Added NeoForge 1.20.1 support",
+      "Localisation changes"
     ]
   }
 }
