@@ -31,7 +31,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
     private final JCheckBox isPersistent = L10N.checkbox("elementgui.common.enable");
     private final ValidationGroup page1group = new ValidationGroup();
 
-
+    @SuppressWarnings("unused")
     public AttributeGUI(MCreator mcreator, ModElement element, boolean editingMode) {
         super(mcreator, element, editingMode);
         this.initGUI();
@@ -50,30 +50,30 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         JPanel selp = new JPanel(new GridLayout(5, 2, 5, 3));
         selp.setOpaque(false);
         this.isPersistent.setOpaque(false);
-        selp.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1),
-                L10N.t("elementgui.attribute.border", new Object[0]),
-                0, 0, this.getFont().deriveFont(12.0F), (Color)UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
+        selp.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1),
+                L10N.t("elementgui.attribute.border"),
+                0, 0, this.getFont().deriveFont(12.0F), (Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
 
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elementgui.attribute.description", new Object[0])));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/description"), L10N.label("elementgui.attribute.description")));
         selp.add(this.description);
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/defaultValue"), L10N.label("elementgui.attribute.defaultValue", new Object[0])));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/defaultValue"), L10N.label("elementgui.attribute.defaultValue")));
         selp.add(this.defaultValue);
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/minValue"), L10N.label("elementgui.attribute.minValue", new Object[0])));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/minValue"), L10N.label("elementgui.attribute.minValue")));
         selp.add(this.minValue);
-        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/maxValue"), L10N.label("elementgui.attribute.maxValue", new Object[0])));
+        selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/maxValue"), L10N.label("elementgui.attribute.maxValue")));
         selp.add(this.maxValue);
         selp.add(HelpUtils.wrapWithHelpButton(this.withEntry("attribute/isPersistent"),
                 L10N.label("elementgui.attribute.isPersistent")));
         selp.add(this.isPersistent);
         pane1.add(PanelUtils.totalCenterInPanel(selp));
-        this.description.setValidator(new TextFieldValidator(this.description, L10N.t("elementgui.attribute.needs_description", new Object[0])));
+        this.description.setValidator(new TextFieldValidator(this.description, L10N.t("elementgui.attribute.needs_description")));
         this.description.enableRealtimeValidation();
         this.page1group.addValidationElement(this.description);
 
         pane2.add(this.entities);
 
-        this.addPage(L10N.t("elementgui.attribute.page.new", new Object[0]), pane1);
-        this.addPage(L10N.t("elementgui.attribute.page.entities", new Object[0]), pane2);
+        this.addPage(L10N.t("elementgui.attribute.page.new"), pane1);
+        this.addPage(L10N.t("elementgui.attribute.page.entities"), pane2);
 
         if (!this.isEditingMode()) {
             String readableNameFromModElement = StringUtils.machineToReadableName(this.modElement.getName());
@@ -81,12 +81,9 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
         }
     }
 
-    public void reloadDataLists() {
-        super.reloadDataLists();
-    }
-
     /**
      * Gets values from {@link net.azzier.attributes.element.types.Attribute} and puts them in correct fields in GUI
+     *
      * @param attribute Attribute which's GUI is being open
      */
     public void openInEditingMode(Attribute attribute) {
@@ -100,6 +97,7 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
 
     /**
      * Gets values from GUI and returns as a new {@link net.azzier.attributes.element.types.Attribute}
+     *
      * @return New Attribute
      */
     public Attribute getElementFromGUI() {
@@ -117,16 +115,16 @@ public class AttributeGUI extends ModElementGUI<Attribute> {
 
     protected AggregatedValidationResult validatePage(int page) {
         List<String> messages = new ArrayList<String>();
-        if((double)this.minValue.getValue() > (double)this.defaultValue.getValue())
+        if ((double) this.minValue.getValue() > (double) this.defaultValue.getValue())
             messages.add(L10N.t("elementgui.attribute.warning.minDefault"));
-        if((double)this.maxValue.getValue() < (double)this.defaultValue.getValue())
+        if ((double) this.maxValue.getValue() < (double) this.defaultValue.getValue())
             messages.add(L10N.t("elementgui.attribute.warning.maxDefault"));
-        if ((double)this.maxValue.getValue() < (double)this.minValue.getValue())
+        if ((double) this.maxValue.getValue() < (double) this.minValue.getValue())
             messages.add(L10N.t("elementgui.attribute.warning.minMax"));
-        if(messages.size() == 1)
+        if (messages.size() == 1)
             return new AggregatedValidationResult.FAIL(messages.get(0));
-        else if(messages.size() > 1)
+        else if (messages.size() > 1)
             return new AggregatedValidationResult.MULTIFAIL(messages);
-        return new AggregatedValidationResult(new ValidationGroup[]{this.page1group});
+        return new AggregatedValidationResult(this.page1group);
     }
 }

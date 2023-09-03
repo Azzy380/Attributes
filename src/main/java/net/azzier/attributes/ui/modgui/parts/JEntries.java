@@ -19,25 +19,26 @@ public class JEntries extends JEntriesList {
     /**
      * List of entities that user added
      */
-    private final List<JEntry> entryList = new ArrayList();
+    private final List<JEntry> entryList = new ArrayList<>();
     private final JPanel entries = new JPanel();
 
+    @SuppressWarnings("unused")
     public JEntries(MCreator mcreator, IHelpContext gui) {
         super(mcreator, new BorderLayout(), gui);
         this.setOpaque(false);
-        JPanel topbar = new JPanel(new FlowLayout(0));
+        JPanel topbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
         topbar.setBackground((Color) UIManager.get("MCreatorLAF.LIGHT_ACCENT"));
-        this.add.setText(L10N.t("elementgui.attribute.add_entry", new Object[0]));
+        this.add.setText(L10N.t("elementgui.attribute.add_entry"));
         topbar.add(this.add);
         this.add("North", topbar);
-        this.entries.setLayout(new BoxLayout(this.entries, 3));
+        this.entries.setLayout(new BoxLayout(this.entries, BoxLayout.PAGE_AXIS));
         this.entries.setOpaque(false);
         this.add.addActionListener((e) -> {
             JEntry entry = new JEntry(mcreator, gui, this.entries, this.entryList);
             this.registerEntryUI(entry);
         });
         this.add("Center", new JScrollPane(PanelUtils.pullElementUp(this.entries)));
-        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1), L10N.t("elementgui.attribute.entity_list_add", new Object[0]), 0, 0, this.getFont().deriveFont(12.0F), (Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
+        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder((Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR"), 1), L10N.t("elementgui.attribute.entity_list_add"), 0, 0, this.getFont().deriveFont(12.0F), (Color) UIManager.get("MCreatorLAF.BRIGHT_COLOR")));
         this.setPreferredSize(new Dimension(this.getPreferredSize().width, (int) ((double) mcreator.getSize().height * 0.6)));
     }
 

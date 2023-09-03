@@ -3,7 +3,8 @@
     {
       "type": "field_data_list_selector",
       "name": "attribute",
-      "datalist": "attribute"
+      "datalist": "attribute",
+      "customEntryProviders": "attribute"
     },
     {
       "type": "input_value",
@@ -24,7 +25,7 @@
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 350,
+  "colour": 195,
   "mcreator": {
     "toolbox_id": "azz_attr",
     "toolbox_init": [

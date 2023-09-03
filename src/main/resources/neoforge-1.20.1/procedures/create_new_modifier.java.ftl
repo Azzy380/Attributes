@@ -1,0 +1,1 @@
+(new AttributeModifier(UUID.fromString(${input$modifierid}), ${JavaModName}.MODID + "." + ${input$name}, ${input$value}, AttributeModifier.Operation.${field$operation}))

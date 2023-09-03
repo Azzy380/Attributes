@@ -12,37 +12,19 @@ import java.util.List;
  * Class stores informations about created mod element, is saved in Workspace
  */
 public class Attribute extends GeneratableElement {
-    /**
-     * Description of an attribute (Example: Max Health)
-     */
-
     public String description;
-
-    /**
-     * Minimal value for new minecraft attribute
-     */
     public Double minValue;
-    /**
-     * Maximal value for new minecraft attribute
-     */
     public Double maxValue;
-    /**
-     * Default value for new minecraft attribute
-     */
     public Double defaultValue;
-    /**
-     * If attribute base value should stay after death
-     */
     public Boolean isPersistent;
-    /**
-     * List of entities that will have this attribute added
-     */
     public List<EntityEntry> entities;
 
+    @SuppressWarnings("unused")
     private Attribute() {
-        this((ModElement) null);
+        this(null);
     }
 
+    @SuppressWarnings("unused")
     public Attribute(ModElement element) {
         super(element);
     }

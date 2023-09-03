@@ -1,12 +1,18 @@
-# Attributes v2.3.5
+# Attributes v2.3.6
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
+
+## Version 2.3.6:
+- Added Forge 1.20.1 support
+- Added NeoForge 1.20.1 support
+- Localisation changes
+- Procedures code cleanup
 
 ## Version 2.3.5:
 - Limited the available entities in the gui to being LivingEntites
 - Added possibility do add attribute to all Monsters, Animals, Water Animals, Golem Mobs, Ambient Creatures
 - Added entity attribute modifiers
-- Removed depenency from create new modifier
+- Removed dependency from create new modifier
 - Localisation changes
 
 ## Version 2.3.4:
@@ -26,7 +32,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 ## Version 2.3.1:
 - Added compatibility with MCreator 2023.1 Snapshot (previous versions are now incompatible)
 - Added custom attribute into data fields in procedure blocks
-- Removed seperate procedures for custom attributes
+- Removed separate procedures for custom attributes
 - [BugFix] Fixed custom attribute name in item attribute modifiers
 
 ## Version 2.3.0:
@@ -40,7 +46,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 - [BugFix] Added a check in Player Persistent Custom Attributes.
 
 ## Version 2.2.8:
-- Added "has attribute" to fix error while modifying attributes in some global trigers. NOTE: User has to make sure given entity is LivingEntity and use this to check if it has attribute.
+- Added "has attribute" to fix error while modifying attributes in some global triggers. NOTE: User has to make sure given entity is LivingEntity and use this to check if it has attribute.
 - Removed casting checks in multiple procedures.****
 
 ## Version 2.2.7b:
@@ -48,14 +54,14 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 ## Version 2.2.7a:
 - Removed not supported procedure blocks
-- [HotFix] Fixed attribute procedures trying to work on non living entities (like chests etc.)
+- [HotFix] Fixed attribute procedures trying to work on non-living entities (like chests etc.)
 
 ## Version 2.2.7:
 - Added Forge 1.19.2 support
 - Added Forge Attributes: Step Height Addition, Attack Range
 - Added Player persistent custom attributes
 - Added Remove Modifier
-- Rewoked attriute modifiers (when creating new modifiers, UUID has to be static set)
+- Reworked attribute modifiers (when creating new modifiers, UUID has to be static set)
 
 ## Version 2.2.6:
 - Added localisation for custom attributes
@@ -73,7 +79,7 @@ Plugin allows modifying attributes, adding attribute modifiers to items and crea
 
 ## Version 2.1:
 - Added blocks for getting whole attribute value (base value + modifiers)
-- Changed "Get value of.." to "Get base value of.." for blocks returning base value
+- Changed "Get value of..." to "Get base value of..." for blocks returning base value
 - Added support for Forge 1.16.5
 
 ## Version 2.0:
