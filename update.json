@@ -2,7 +2,7 @@
   "attributes": {
     "latest": "2.3.7",
     "changes": [
-      "Item Attribute Modifiers Reworked (old system is marked deprecated and will be deleter later)"
+      "added procedure to add modifier to an item, old system for adding attribute modifiers has become deprecated (will be deleted later)"
     ]
   }
 }

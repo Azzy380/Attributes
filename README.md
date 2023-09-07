@@ -1,6 +1,9 @@
-# Attributes v2.3.6
+# Attributes v2.3.7
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
+
+## Version 2.6.7:
+- added procedure to add modifier to an item, old system for adding attribute modifiers to items is now deprecated (will be deleted later)
 
 ## Version 2.3.6:
 - Added Forge 1.20.1 support
