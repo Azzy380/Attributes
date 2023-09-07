@@ -1,10 +1,11 @@
 {
   "id": "attributes",
   "minversion": 202300300000,
+  "maxversion": 202300399999,
   "javaplugin": "net.azzier.attributes.Launcher",
   "info": {
     "name": "Attributes",
-    "version": "2.3.6",
+    "version": "2.3.7",
     "description": "Plugin adds attributes, attribute modifiers and custom attributes to MCreator!",
     "author": "Azzier",
     "updateJSONURL": "https://raw.githubusercontent.com/Azzy380/Attributes/main/update.json"
