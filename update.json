@@ -1,8 +1,9 @@
 {
   "attributes": {
-    "latest": "2.3.7",
+    "latest": "2.3.8",
     "changes": [
-      "added procedure to add modifier to an item, old system for adding attribute modifiers has become deprecated (will be deleted later)"
+      "Added two new Forge attributes to lists for 1.20.1: EntityReach and BlockReach",
+      "Removed forge attribute ReachDistance from 1.20.1"
     ]
   }
 }

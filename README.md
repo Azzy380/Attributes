@@ -1,6 +1,10 @@
-# Attributes v2.3.7
+# Attributes v2.3.8
 Plugin allows modifying attributes, adding attribute modifiers to items and creating custom attributes!
 ### You need to turn on java plugins for it to work.
+
+## Version 2.3.8:
+- Added two new Forge attributes to lists for 1.20.1: EntityReach and BlockReach
+- Removed forge attribute ReachDistance from 1.20.1
 
 ## Version 2.3.7:
 - added procedure to add modifier to an item, old system for adding attribute modifiers to items is now deprecated (will be deleted later)
