@@ -11,6 +11,16 @@
         }
         ListTag _listtag = _tag.getList("AttributeModifiers", 10);
         CompoundTag _compoundtag = ${input$modifier}.save();
+        int _index = -1;
+        for(int _i = 0; _i < _listtag.size(); _i++) {
+            if((_listtag.get(_i) instanceof CompoundTag _e && AttributeModifier.load(_e).equals(${input$modifier}))) {
+                _index = _i;
+                break;
+            }
+        }
+        if(_index != -1) {
+            _listtag.remove(_index);
+        }
         _compoundtag.putString("AttributeName", ${getAttributeResource(field$attribute)}.getId().toString());
         _compoundtag.putString("Slot", EquipmentSlot.${field$slot}.getName());
         _listtag.add(_compoundtag);
