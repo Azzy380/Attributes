@@ -36,3 +36,7 @@
   readable_name: "Step Height Addition"
 - FORGE:NAMETAG_DISTANCE:
   readable_name: "Nametag Distance"
+- FORGE:BLOCK_REACH:
+  readable_name: "Block Reach"
+- FORGE:ENTITY_REACH:
+  readable_name: "Entity Reach"
